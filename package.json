@@ -1,0 +1,34 @@
+{
+  "name": "sap-leanix",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec ts-node src/app.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "@types/json-server": "^0.14.7",
+    "@types/lodash": "^4.17.10",
+    "@types/lowdb": "^1.0.15",
+    "@types/node": "^22.7.5",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "http-status": "^1.7.4",
+    "json-server": "^1.0.0-beta.3",
+    "lodash": "^4.17.21",
+    "lowdb": "^7.0.1",
+    "mongodb": "^6.9.0",
+    "mongoose": "^8.7.1",
+    "nodemon": "^3.1.7",
+    "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "ts-node": "^10.9.2"
+  }
+}
