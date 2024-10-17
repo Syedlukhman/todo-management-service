@@ -25,21 +25,3 @@ const todoList = new mongoose.Schema({
 const TodoModel = mongoose.model("todos", todoList);
 
 export default TodoModel;
-
-// database.ts
-// import { MongoClient } from "mongodb";
-
-// const url = "mongodb://localhost:27017"; // Your MongoDB connection string
-// const dbName = "SAP_LeanIX"; // Your database name
-// const client = new MongoClient(url);
-
-// export async function connect() {
-//   try {
-//     await client.connect();
-//     console.log("Connected to database successfully");
-//   } catch (err) {
-//     console.error("Database connection failed:", err);
-//   }
-// }
-
-// export const getDb = () => client.db(dbName);
