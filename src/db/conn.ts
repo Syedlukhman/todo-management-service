@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
+const url = ""; //add your own uri to access your local db
 
 mongoose
-  .connect("mongodb://localhost:27017/SAP_LeanIX")
+  .connect(url)
   .then(() => {
     console.log("DB created successfully");
   })
