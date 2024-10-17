@@ -10,18 +10,15 @@ mongoose
     console.log(err, "DB not created");
   });
 
-const todoListSchema = new mongoose.Schema(
+const todoList = new mongoose.Schema(
   {
     id: Number,
     title: String,
     status: String,
+    clientId: Number,
   },
   { _v: false }
 );
-const todoList = new mongoose.Schema({
-  clientId: Number,
-  todos: [todoListSchema],
-});
 
 const TodoModel = mongoose.model("todos", todoList);
 

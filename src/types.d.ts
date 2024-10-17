@@ -3,7 +3,7 @@ import DataLayer from "./services/dataLayer";
 declare global {
   namespace Express {
     interface Request {
-      client?: any;
+      todo?: any;
       iDl: DataLayer;
     }
   }
