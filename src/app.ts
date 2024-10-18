@@ -61,8 +61,7 @@ app.get(
   async (req: Request, res: Response, next: NextFunction) => {
     try {
       const { id } = req.params; // Get the Todo ID from request parameters
-      const { iDl } = req;
-      const todo = await iDl.findOne({ _id: new ObjectId(id) });
+      const { iDl, todo } = req;
 
       if (!todo) {
         throw new ApiError(httpStatus.NOT_FOUND, "Todo Not Found", "NOT_FOUND");
