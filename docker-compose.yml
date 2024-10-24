@@ -1,0 +1,28 @@
+# docker run --name mongodb -d -p 27017:27017 mongo
+# the syntax of above is docker run --name name_of_db -d -p <host-port>:<container-port> docker_image_name
+# docker run Runs a new Docker container.
+
+# step 1: define version
+version: "3.8"
+services:
+  mongo_db:
+    container_name: dababase_container
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_db:/data/db
+  app:
+    build: .
+    ports:
+      - 9000:9000
+    environment:
+      MONGODB_URI: mongodb://mongo_db:27017/SAP_LEANX # Use this in your app to connect
+    depends_on:
+      - mongo_db
+volumes:
+  mongo_db: {}
+# step 2: define the services which we will use
+#
+#
+#
