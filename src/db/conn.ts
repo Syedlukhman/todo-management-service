@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const url = "mongodb://mongo_db:27017/SAP_LEANIX";
+const url = "mongodb://mongo_db:27017/todo_app_db";
 
 mongoose
   .connect(url, {

@@ -33,11 +33,29 @@ A simple REST API for managing To-Dos, built with TypeScript and Express. This A
    cd <your-repo-name>
    npm install
 
-3.Running the Application
+To run the application there are three way mentioned below, follow any one.
+
+3.Running the Application locally
+change mongodb uri to your local uri in conn.ts file
 Start the Server:
 npm start
 
 The server will be running at http://localhost:9000.
+(or) 4. Running the Application on docker
+run the command docker-compose up --build
+The server will be running at http://localhost:9000.
+
+(or)
+
+5. Pull docker images
+   5.1. pull mongo image
+   docker pull syedlukhman64/rest:mongo
+   5.2. Run mongo db container
+   docker run --name mongo_db -d -p 27017:27017 syedlukhman64/rest:mongo
+   5.3 pull node api image
+   docker pull syedlukhman64/rest:latest
+   5.4 Run todo-api container and link with mongodb database
+   docker run --name todo-app -d -p 9000:9000 --link mongo_db:mongo syedlukhman64/rest:latest
 
 ## API Endpoints
 
