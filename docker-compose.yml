@@ -4,6 +4,8 @@
 
 # step 1: define version
 version: "3.8"
+
+# step 2: define the services which we will use
 services:
   mongo_db:
     container_name: dababase_container
@@ -22,7 +24,3 @@ services:
       - mongo_db
 volumes:
   mongo_db: {}
-# step 2: define the services which we will use
-#
-#
-#
